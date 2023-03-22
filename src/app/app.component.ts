@@ -22,7 +22,7 @@ export class AppComponent {
    */
   getData(input: string) {
     if (isNaN(Number(input))) {
-      throw new Error('Invalid input');
+      throw new Error('Invalid input!');
     }
 
     const arr = input.split('');
