@@ -19,8 +19,8 @@ describe('AppComponent', () => {
   it(`getData should modify input`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    const result = app.getData('1111');
-    expect(result).toEqual('0202');
+    const result = app.getData('11111');
+    expect(result).toEqual('02020');
   });
 
   it(`getData should throw error if input is NAN`, () => {
@@ -28,7 +28,7 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
 
     expect(function () {
-      app.getData('ABCD');
+      app.getData('AB123CD');
     }).toThrow();
   });
 

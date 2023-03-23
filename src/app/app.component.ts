@@ -25,18 +25,21 @@ export class AppComponent {
       throw new Error('Invalid input!');
     }
 
-    const arr = input.split('');
-    let newVal = '';
-    for (let i = 0; i < arr.length; i++) {
-      if (i % 2 == 1) {
-        let num = Number(arr[i]);
-        newVal += ++num;
-      } else {
-        let num = Number(arr[i]);
-        newVal += --num;
+    try {
+      const arr = input.split('');
+      let newVal = '';
+      for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 1) {
+          let num = Number(arr[i]);
+          newVal += ++num;
+        } else {
+          let num = Number(arr[i]);
+          newVal += --num;
+        }
       }
+      return newVal;
+    } catch (error) {
+      throw error;
     }
-
-    return newVal;
   }
 }
